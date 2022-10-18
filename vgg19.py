@@ -16,7 +16,7 @@ WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/releases
 
 
 def VGG19(include_top=True, weights='imagenet',
-          input_tensor=None, input_shape=(224, 224, 3),
+          input_shape=(224, 224, 3),
           pooling=None,
           classes=1000):
     """
