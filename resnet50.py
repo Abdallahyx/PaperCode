@@ -96,7 +96,7 @@ def convolutional_block(X, f, filters, s = 2, training=True, initializer=glorot_
     
     return X
   
-  def ResNet50(input_shape = (64, 64, 3), 
+def ResNet50(input_shape = (64, 64, 3), 
              weights= None,
              classes = 1000,
              include_top = True, 
