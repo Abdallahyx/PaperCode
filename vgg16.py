@@ -8,17 +8,15 @@ from keras.layers import Conv2D
 from keras.layers import MaxPooling2D
 from keras.layers import GlobalMaxPooling2D
 from keras.layers import GlobalAveragePooling2D
-from keras.preprocessing import image
-from keras.utils import layer_utils
 from keras.utils.data_utils import get_file
-from keras import backend as K
+
 
 
 WEIGHTS_PATH = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels.h5'
 WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
-def VGG16(include_top=True, weights='imagenet',
+def VGG16(include_top=True, weights=None,
           input_shape=(224, 224, 3),
           pooling=None,
           classes=1000):
