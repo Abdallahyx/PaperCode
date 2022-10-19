@@ -1,21 +1,19 @@
 import numpy as np
-from keras.models import Model
-from keras.layers import Flatten, Dense, Input
-from keras.layers import Conv2D
-from keras.layers import MaxPooling2D
-from keras.layers import GlobalMaxPooling2D
-from keras.layers import GlobalAveragePooling2D
-from keras.preprocessing import image
-from keras.utils import layer_utils
-from keras.utils.data_utils import get_file
-from keras import backend as K
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Flatten, Dense, Input
+from tensorflow.keras.layers import Conv2D
+from tensorflow.keras.layers import MaxPooling2D
+from tensorflow.keras.layers import GlobalMaxPooling2D
+from tensorflow.keras.layers import GlobalAveragePooling2D
+from tensorflow.keras.utils.data_utils import get_file
+
 
 
 WEIGHTS_PATH = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg19_weights_tf_dim_ordering_tf_kernels.h5'
 WEIGHTS_PATH_NO_TOP = 'https://github.com/fchollet/deep-learning-models/releases/download/v0.1/vgg19_weights_tf_dim_ordering_tf_kernels_notop.h5'
 
 
-def VGG19(include_top=True, weights='imagenet',
+def VGG19(include_top=True, weights= None,
           input_shape=(224, 224, 3),
           pooling=None,
           classes=1000):
